@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Car Control</title>
+</head>
+
+<body style="background-color:cornflowerblue">
+
+    <center>
+  <h1 style="color:chartreuse">Car Control</h1>
+
+  <button id="forward" class="btn btn-link" style="height: 200px; width: 200px; font-size:30px; background-color: aqua;" onmousedown="sendCommand('forward')" onmouseup="sendCommand('stop')">Forward</button>
+  <button id="backward" style="height: 200px; width: 200px; font-size:30px; background-color: aqua;" onmousedown="sendCommand('backward')" onmouseup="sendCommand('stop')">Backward</button>
+  <button id="left" style="height: 200px; width: 200px; font-size:30px; background-color: aqua;" onmousedown="sendCommand('left')" onmouseup="sendCommand('stop')">Left</button>
+  <button id="right" style="height: 200px; width: 200px; font-size:30px; background-color: aqua;" onmousedown="sendCommand('right')" onmouseup="sendCommand('stop')">Right</button>
+
+  <script>
+    function sendCommand(command) {
+      fetch("/" + command);
+    }
+  </script>
+
+</center>
+</body>
+</html>
